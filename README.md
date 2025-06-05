@@ -1,4 +1,4 @@
-🤖 Bot Telegram IA – Agence MS
+🤖 Bot Telegram IA –  MakeSocial_Bot
 Ce projet est un bot Telegram alimenté par l'API OpenAI (GPT-4o), conçu pour répondre automatiquement et efficacement aux messages des utilisateurs avec un ton professionnel et concis.
 
 📦 Fonctionnalités
