@@ -1,67 +1,112 @@
-🤖 Bot Telegram IA –  MakeSocial_Bot
-Ce projet est un bot Telegram alimenté par l'API OpenAI (GPT-4o), conçu pour répondre automatiquement et efficacement aux messages des utilisateurs avec un ton professionnel et concis.
+🤖 Telegram Startup Assistant
+Assistant personnel connecté à OpenAI, Notion, Google Calendar et SMTP, destiné à accompagner un solo-preneur dans ses tâches quotidiennes : mailing, gestion de rendez-vous, et réponses IA personnalisées.
 
 📦 Fonctionnalités
-Commande /start pour accueillir l’utilisateur.
+✅ Commandes Telegram
+/start – Affiche les instructions d’utilisation
 
-Traitement de tout message texte via GPT-4o.
+/mailing – Prévisualise un envoi d’e-mails basé sur les données de Notion
 
-Réponses directes, sans fioritures ni bavardage.
+/confirm – Envoie les mails aux prospects listés
 
-Intégration simple avec la librairie python-telegram-bot.
+/list – Liste les événements restants aujourd’hui dans Google Calendar
 
-🚀 Installation
-1. Cloner le dépôt
+Texte libre – Gère automatiquement :
+
+📅 Création/suppression d’événements
+
+🤖 Réponses IA OpenAI
+
+✉️ Gestion intelligente du mailing
+
+🔌 Intégrations
+OpenAI GPT-4o – Réponses IA, extraction d’événements en langage naturel
+
+Google Calendar API – Création, suppression, affichage d’événements
+
+Notion API – Récupération de prospects pour les campagnes mails
+
+SMTP – Envoi de mails personnalisés (templating HTML)
+
+Telegram Bot – Interface utilisateur via bot Telegram
+
+🧾 Structure des dossiers
 bash
 Copier
 Modifier
-git clone https://github.com/ton-utilisateur/ton-repo.git
-cd ton-repo
-2. Créer un environnement virtuel (optionnel mais recommandé)
+project-root/
+│
+├── google_calendar/
+│   └── google_calendar.py            # Fonctions pour interagir avec Google Calendar
+│
+├── google_notion_mailing/
+│   ├── mailer.py                     # Fonction d'envoi de mail
+│   ├── email_utils.py                # Templating HTML
+│   └── notion_utils.py               # Extraction des prospects
+│
+├── main.py                           # Script principal du bot
+├── .env                              # Clés API et tokens
+└── README.md                         # Ce fichier
+⚙️ Prérequis
+Python 3.10+
+
+Un bot Telegram actif avec TELEGRAM_TOKEN
+
+Une clé OpenAI : OPENAI_API_KEY
+
+Accès aux APIs :
+
+Notion
+
+Google Calendar
+
+SMTP pour l’envoi d’emails
+
+🛠️ Installation
 bash
 Copier
 Modifier
-python -m venv venv
-source venv/bin/activate  # Sous Windows : venv\Scripts\activate
-3. Installer les dépendances
-bash
-Copier
-Modifier
+# 1. Cloner le repo
+git clone https://github.com/ton-projet/startup-assistant.git
+cd startup-assistant
+
+# 2. Installer les dépendances
 pip install -r requirements.txt
-Exemple de requirements.txt à créer :
 
+# 3. Configurer les variables d'environnement
+cp .env.example .env
+# puis remplir avec :
+# TELEGRAM_TOKEN=...
+# OPENAI_API_KEY=...
+# ...
+
+# 4. Lancer le bot
+python main.py
+🔐 Fichier .env attendu
+dotenv
 Copier
 Modifier
-python-telegram-bot~=20.0
-openai
-python-dotenv
-4. Ajouter les variables d’environnement
-Créer un fichier .env à la racine du projet avec le contenu suivant :
+TELEGRAM_TOKEN=your_telegram_bot_token
+OPENAI_API_KEY=your_openai_api_key
+EMAIL_HOST=smtp.example.com
+EMAIL_PORT=587
+EMAIL_USERNAME=your_email@example.com
+EMAIL_PASSWORD=your_email_password
+NOTION_TOKEN=your_notion_token
+NOTION_DATABASE_ID=your_database_id
+🚀 Exemple d’usage
+Envoyer ajoute un rdv demain à 14h avec Alex sur Telegram ➜ le bot crée un événement dans Google Calendar
 
-ini
-Copier
-Modifier
-TELEGRAM_TOKEN=ton_token_telegram
-OPENAI_API_KEY=ta_clef_openai
-⚙️ Lancer le bot
-bash
-Copier
-Modifier
-python bot.py
-🧠 Architecture
-bot.py : Point d’entrée du bot Telegram.
+Envoyer /mailing ➜ le bot récupère les prospects Notion, affiche un aperçu, puis /confirm envoie les mails automatiquement
 
-agents.py : (à créer ou compléter) contient la classe Agent (non utilisée dans ce script mais importée).
+Envoyer un message libre ➜ le bot répond via GPT-4o de manière concise et professionnelle
 
-.env : Stocke les secrets d’API.
+📌 À venir
+Modification d’événements Google Calendar
 
-🛡️ Bonnes pratiques
-Ne jamais exposer .env dans les commits publics.
+Tracking de réponses aux e-mails
 
-Respecter la politique d’utilisation d’OpenAI et Telegram.
+Intégration CRM (HubSpot / Airtable / n8n)
 
-Prévoir un système de logs avancé en production.
-
-📜 Licence
-MIT – libre d’utilisation, modification, distribution avec mention de l’auteur.
-
+🧠 Contributeurs
+Conçu pour les fondateurs solo, no-code users et développeurs cherchant à automatiser leur stack startup.
