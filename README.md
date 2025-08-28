@@ -67,7 +67,7 @@ bash
 Copier
 Modifier
 # 1. Cloner le repo
-git clone (https://github.com/cerealmilkdev/MS_BOT_OPENAI_TELEGRAM.git)
+git clone https://github.com/cerealmilkdev/MS_BOT_OPENAI_TELEGRAM.git
 cd startup-assistant
 
 # 2. Installer les dépendances
