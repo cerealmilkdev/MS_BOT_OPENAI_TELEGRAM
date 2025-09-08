@@ -74,9 +74,6 @@ Modifier
 git clone https://github.com/cerealmilkdev/MS_BOT_OPENAI_TELEGRAM.git
 cd startup-assistant
 
-# 2. Installer les dépendances
-pip install -r requirements.txt
-
 # 3. Configurer les variables d'environnement
 cp .env.example .env
 puis remplir avec :
@@ -97,8 +94,9 @@ EMAIL_USERNAME=your_email@example.com
 EMAIL_PASSWORD=your_email_password
 NOTION_TOKEN=your_notion_token
 NOTION_DATABASE_ID=your_database_id
-🚀 Exemple d’usage
-Envoyer ajoute un rdv demain à 14h avec Alex sur Telegram ➜ le bot crée un événement dans Google Calendar
+
+# 🚀 Exemple d’usage
+Envoyer "ajoutes un rdv demain à 14h avec Alex sur Telegram" ➜ le bot crée un événement dans Google Calendar
 
 Envoyer /mailing ➜ le bot récupère les prospects Notion, affiche un aperçu, puis /confirm envoie les mails automatiquement
 
