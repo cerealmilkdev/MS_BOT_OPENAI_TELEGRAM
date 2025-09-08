@@ -1,3 +1,5 @@
+# TELEGRAM BOT 'GOOGLE CALENDAR - NOTION'
+
 🤖 Telegram Startup Assistant
 Assistant personnel connecté à OpenAI, Notion, Google Calendar et SMTP, destiné à accompagner un solo-preneur dans ses tâches quotidiennes : mailing, gestion de rendez-vous, et réponses IA personnalisées.
 
