@@ -22,7 +22,7 @@ Texte libre – Gère automatiquement :
 ✉️ Gestion intelligente du mailing
 
 🔌 Intégrations
-OpenAI GPT-4o – Réponses IA, extraction d’événements en langage naturel
+OpenAI (GPT-4o) – Réponses IA, extraction d’événements en langage naturel
 
 Google Calendar API – Création, suppression, affichage d’événements
 
@@ -30,7 +30,7 @@ Notion API – Récupération de prospects pour les campagnes mails
 
 SMTP – Envoi de mails personnalisés (templating HTML)
 
-Telegram Bot – Interface utilisateur via bot Telegram
+Telegram Bot – Interface utilisateur via l'app Telegram
 
 🧾 Structure des dossiers
 bash
@@ -49,12 +49,13 @@ project-root/
 ├── main.py                           # Script principal du bot
 ├── .env                              # Clés API et tokens
 └── README.md                         # Ce fichier
+
 ⚙️ Prérequis
 Python 3.10+
 
 Un bot Telegram actif avec TELEGRAM_TOKEN
 
-Une clé OpenAI : OPENAI_API_KEY
+Une clé API OpenAI : OPENAI_API_KEY
 
 Accès aux APIs :
 
@@ -68,6 +69,7 @@ SMTP pour l’envoi d’emails
 bash
 Copier
 Modifier
+
 # 1. Cloner le repo
 git clone https://github.com/cerealmilkdev/MS_BOT_OPENAI_TELEGRAM.git
 cd startup-assistant
@@ -109,6 +111,5 @@ Modification d’événements Google Calendar
 Tracking de réponses aux e-mails
 
 Intégration CRM (HubSpot / Airtable / n8n)
-
 🧠 Contributeurs
 Conçu pour les fondateurs solo, no-code users et développeurs cherchant à automatiser leur stack startup.
