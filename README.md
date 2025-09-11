@@ -82,20 +82,30 @@ OPENAI_API_KEY=...
 
 # 4. Lancer le bot
 python main.py
+
 🔐 Fichier .env attendu
 dotenv
 Copier
 Modifier
+
 TELEGRAM_TOKEN=your_telegram_bot_token
+
 OPENAI_API_KEY=your_openai_api_key
+
 EMAIL_HOST=smtp.example.com
+
 EMAIL_PORT=587
+
 EMAIL_USERNAME=your_email@example.com
+
 EMAIL_PASSWORD=your_email_password
+
 NOTION_TOKEN=your_notion_token
+
 NOTION_DATABASE_ID=your_database_id
 
 # 🚀 Exemple d’usage
+
 Envoyer "ajoutes un rdv demain à 14h avec Alex sur Telegram" ➜ le bot crée un événement dans Google Calendar
 
 Envoyer /mailing ➜ le bot récupère les prospects Notion, affiche un aperçu, puis /confirm envoie les mails automatiquement
@@ -103,7 +113,6 @@ Envoyer /mailing ➜ le bot récupère les prospects Notion, affiche un aperçu,
 Envoyer un message libre ➜ le bot répond via GPT-4o de manière concise et professionnelle
 
 📌 À venir
-Modification d’événements Google Calendar
 
 Tracking de réponses aux e-mails
 
